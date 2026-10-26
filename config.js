@@ -9,9 +9,8 @@ const CONFIG = {
   titular: 'Tu negocio merece una mejor presencia en internet.',
   descripcion: 'Diseño páginas informativas y catálogos digitales para negocios que quieren mostrar sus productos, explicar sus servicios y facilitar el contacto con sus clientes.',
   correo: 'gamez.desarrolloweb@gmail.com',
-  whatsapp: '', // Agrega tu número con clave de país, SIN + ni espacios. Ejemplo: 521XXXXXXXXXX
+  whatsapp: '527474202033', // México (52) + 10 dígitos; sin espacios ni +
   ubicacion: 'Nuevo León, México',
-  github: 'https://github.com/gamezun',
   mostrarPrecios: true, // false = sustituye precios por "Cotización personalizada"
   servicios: [
     { icono: '◈', titulo: 'Páginas informativas', descripcion: 'Presenta tu negocio, horarios, ubicación y medios de contacto.' },
@@ -40,8 +39,7 @@ const CONFIG = {
     }
   ],
   proyectos: [
-    { titulo: 'DNZ Mobiles', categoria: 'Catálogo digital · Proyecto real', descripcion: 'Catálogo de accesorios para celulares, desarrollado como muestra de trabajo comercial.', url: 'https://gamezun.github.io/DNZ-Mobiles/', iniciales: 'DNZ' },
-    { titulo: 'Captura de alumnos', categoria: 'Formulario web · Proyecto académico', descripcion: 'Formulario de captura desarrollado durante mis estudios de ingeniería.', url: 'https://gamezun.github.io/Captura-Alumnos-Universidad/', iniciales: 'HTML' }
+    { titulo: 'DNZ Mobiles', categoria: 'Catálogo digital · Proyecto real', descripcion: 'Catálogo de accesorios para celulares, desarrollado como muestra de trabajo comercial.', url: 'https://gamezun.github.io/DNZ-Mobiles/', iniciales: 'DNZ' }
   ],
   pasos: [
     { titulo: 'Me cuentas tu idea', descripcion: 'Revisamos qué necesita realmente tu negocio.' },
