@@ -22,11 +22,11 @@ const CONFIG = {
     {
       nombre: 'Página esencial', precio: 1000, unidad: 'MXN', destacado: true,
       descripcion: 'Precio de lanzamiento para los primeros proyectos.',
-      caracteristicas: ['Una página adaptable a celular', 'Hasta 5 fotografías proporcionadas por el cliente', 'Información, horarios y ubicación', 'Botón de contacto', 'Una ronda de correcciones'],
+      caracteristicas: ['Una página adaptable a celular', 'Hasta 50 fotografías proporcionadas por el cliente', 'Información, horarios y ubicación', 'Botón de contacto', 'Una ronda de correcciones'],
       nota: 'No incluye dominio de pago ni mantenimiento ilimitado.'
     },
     {
-      nombre: 'Catálogo digital', precio: null, unidad: 'MXN', destacado: false,
+      nombre: 'Catálogo digital', precio: 700, unidad: 'MXN', destacado: false,
       descripcion: 'Para mostrar tus productos y facilitar consultas.',
       caracteristicas: ['Diseño adaptado al negocio', 'Productos organizados por categorías', 'Fotografías y descripciones', 'Contacto para solicitar información', 'Alcance y cantidad de productos por acordar'],
       nota: 'Se cotiza según la cantidad de productos y funciones.'
