@@ -1,0 +1,26 @@
+GÁMEZ WEB — INSTRUCCIONES
+========================
+1. Abre index.html en tu navegador para ver el diseño.
+2. Abre config.js en VS Code. Ahí puedes editar:
+   - marca, titular y descripción
+   - correo y WhatsApp
+   - servicios y proyectos
+   - paquetes, precios, beneficios y notas
+   - mostrarPrecios: true / false
+3. Para modificar colores y estilo, abre styles.css (variables al principio).
+4. Para cambiar el logo, reemplaza assets/logo.png por otra imagen con ese nombre.
+5. Para publicar en https://gamezun.github.io/:
+   a) Inicia sesión en GitHub con el usuario gamezun.
+   b) Crea un repositorio PÚBLICO llamado exactamente gamezun.github.io.
+   c) Sube index.html, styles.css, script.js, config.js y la carpeta assets.
+   d) En Settings > Pages selecciona Deploy from a branch, rama main, carpeta /(root).
+   e) Espera la publicación y abre https://gamezun.github.io/.
+   f) Comprueba que el QR de las tarjetas abra el portafolio.
+
+NOTAS:
+- El QR está preparado para esa dirección FUTURA; no se ha verificado que esté publicada.
+- No publiques contraseñas, claves ni información privada en el repositorio.
+- WhatsApp está vacío hasta que decidas un número de contacto.
+- Precios introductorios y servicios deben corresponder a lo que realmente puedas entregar.
+- No incluye servidor, base de datos, panel de administración ni carrito de compras.
+- Fuentes web de Google Fonts requieren internet; hay tipografías alternativas.
