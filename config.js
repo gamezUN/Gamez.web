@@ -20,7 +20,7 @@ const CONFIG = {
   ],
   paquetes: [
     {
-      nombre: 'Página esencial', precio: 1000, unidad: 'MXN', destacado: true,
+      nombre: 'Página esencial', precio: 1500, unidad: 'MXN', destacado: true,
       descripcion: 'Precio de lanzamiento para los primeros proyectos.',
       caracteristicas: ['Una página adaptable a celular', 'Hasta 50 fotografías proporcionadas por el cliente', 'Información, horarios y ubicación', 'Botón de contacto', 'Una ronda de correcciones'],
       nota: 'No incluye dominio de pago ni mantenimiento ilimitado.'
