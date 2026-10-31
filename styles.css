@@ -695,3 +695,8 @@ footer {
     background: linear-gradient(130deg, #0b1427, #152c50);
     color: #56bbff
 }
+
+/* Paquetes y planes de continuidad */
+.mantenimientos .mantenimiento { background: linear-gradient(155deg, #111e34, #0d192d); }
+.mantenimiento .precio small { display: inline-block; font: 500 12px 'DM Sans', Arial, sans-serif; color: var(--suave); }
+.paquete .precio small { display: inline-block; font: 500 11px 'DM Sans', Arial, sans-serif; color: var(--suave); margin-left: 4px; }
