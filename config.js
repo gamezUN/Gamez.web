@@ -1,81 +1,54 @@
-/* =========================================================
-   GÁMEZ WEB — CONFIGURACIÓN EDITABLE
-   Modifica aquí tus datos, servicios, paquetes y proyectos.
-   ========================================================= */
+/* GÁMEZ WEB — servicios, planes y precios */
 const CONFIG = {
   marca: 'GÁMEZ WEB',
-  subtitulo: 'Soluciones digitales, sistemas empresariales y desarrollo web',
-  titular: 'Tecnología que organiza tu negocio y lo impulsa a crecer.',
-  descripcion: 'Creamos sitios web, catálogos, tiendas en línea y sistemas de gestión para negocios. Desde soluciones listas para implementar hasta plataformas desarrolladas a la medida de tus procesos.',
+  subtitulo: 'Soluciones digitales para negocios',
+  titular: 'Tu negocio, listo para crecer en digital.',
+  descripcion: 'Creamos páginas web, catálogos y sistemas que ayudan a los negocios a vender, organizarse y trabajar mejor.',
   correo: 'gamez.desarrolloweb@gmail.com',
   whatsapp: '527474202033',
   ubicacion: 'Nuevo León, México',
   mostrarPrecios: true,
   servicios: [
-    { icono: '◈', titulo: 'Páginas web empresariales', descripcion: 'Sitios profesionales para presentar tu empresa, servicios, sucursales, horarios y medios de contacto.' },
-    { icono: '▦', titulo: 'Catálogos digitales', descripcion: 'Catálogos organizados por categorías, con fotografías, fichas de producto y contacto directo por WhatsApp.' },
-    { icono: '▤', titulo: 'Tiendas en línea', descripcion: 'Experiencias de compra con catálogo, carrito y flujo de pedidos. Los pagos en línea se integran según proveedor y alcance.' },
-    { icono: '◎', titulo: 'CRM y gestión de clientes', descripcion: 'Herramientas para centralizar contactos, oportunidades, seguimiento comercial y actividad del negocio.' },
-    { icono: '▣', titulo: 'Sistemas administrativos', descripcion: 'Paneles para organizar operaciones, ventas, registros, usuarios e información de acuerdo con cada negocio.' },
-    { icono: '▥', titulo: 'Inventarios y productos', descripcion: 'Control de productos, existencias, movimientos y consultas para tener mejor visibilidad de la operación.' },
-    { icono: '▦', titulo: 'Reservaciones y agendas', descripcion: 'Sistemas para administrar citas, fechas, solicitudes y disponibilidad de servicios.' },
-    { icono: '⌘', titulo: 'Automatización de procesos', descripcion: 'Reducción de tareas repetitivas mediante formularios, notificaciones, reportes e integraciones viables.' },
-    { icono: '↗', titulo: 'Integraciones y soluciones a medida', descripcion: 'Conexión con herramientas externas y desarrollo de módulos especiales después de evaluar requisitos y viabilidad.' },
-    { icono: '⚙', titulo: 'Mantenimiento y soporte', descripcion: 'Actualizaciones de contenido, corrección de incidencias y mejoras con un alcance previamente acordado.' }
+    { icono: '◈', titulo: 'Presencia digital', descripcion: 'Landing pages y páginas web empresariales para presentar tu negocio y atraer clientes.' },
+    { icono: '▦', titulo: 'Catálogos y ventas', descripcion: 'Catálogos digitales y tiendas en línea para mostrar productos y recibir pedidos.' },
+    { icono: '▣', titulo: 'Administración empresarial', descripcion: 'CRM, control de clientes, ventas y herramientas para organizar la operación.' },
+    { icono: '⚙', titulo: 'Desarrollo personalizado', descripcion: 'Sistemas e integraciones diseñados a partir de las necesidades de cada empresa.' }
   ],
   paquetes: [
     {
-      nombre: 'Presencia Digital', precio: 2500, unidad: 'MXN', destacado: false,
-      descripcion: 'Una página profesional para presentar tu negocio y facilitar que nuevos clientes te contacten.',
-      caracteristicas: ['Diseño web profesional', 'Adaptación a celulares y computadoras', 'Información, servicios y ubicación', 'Botón directo a WhatsApp', 'Formulario o medios de contacto'],
-      nota: 'Pago inicial. Dominio, alojamiento de pago y funciones adicionales se cotizan por separado.'
+      nombre: 'GMZ Básico', precio: 1500, unidad: 'MXN', destacado: true,
+      descripcion: 'La presencia digital que tu negocio necesita para comenzar a captar clientes.',
+      caracteristicas: ['Catálogo digital desde $1,500 MXN', 'Landing page empresarial desde $2,500 MXN', 'Diseño adaptable a celulares', 'Contacto directo por WhatsApp', 'Configuración y publicación'],
+      nota: 'El precio depende del tipo de página, contenido y alcance. Se define antes de iniciar.'
     },
     {
-      nombre: 'Catálogo Digital', precio: 1500, unidad: 'MXN', destacado: true,
-      descripcion: 'Muestra tus productos de forma organizada y facilita las consultas y pedidos.',
-      caracteristicas: ['Catálogo web de productos', 'Organización por categorías', 'Fotografías y descripciones', 'Acceso directo a WhatsApp', 'Diseño adaptable a celulares'],
-      nota: 'Precio inicial para catálogo de alcance básico. Cantidad de productos, filtros y administración se definen en la cotización.'
-    },
-    {
-      nombre: 'GMZ CRM Base', precio: 7500, unidad: 'MXN', destacado: false,
-      descripcion: 'Implementación y configuración de nuestra solución administrativa base para negocios que necesitan centralizar su operación.',
-      caracteristicas: ['Acceso a la plataforma CRM base existente', 'Configuración inicial para el negocio', 'Organización de clientes y actividad comercial', 'Panel administrativo y herramientas disponibles en la versión base', 'Puesta en marcha y capacitación inicial'],
-      nota: 'Desde $6,000 y hasta $8,000 MXN según configuración. Se presenta una demostración para revisar los módulos disponibles y confirmar el alcance antes de contratar.'
-    },
-    {
-      nombre: 'CRM Especializado', precio: 10000, unidad: 'MXN', destacado: false,
-      descripcion: 'Un sistema diseñado alrededor de los procesos, roles y necesidades específicas de tu empresa.',
-      caracteristicas: ['Reunión de diagnóstico y levantamiento de requisitos', 'Diseño de módulos y flujos personalizados', 'Paneles, reportes y permisos según alcance', 'Integraciones y automatizaciones sujetas a viabilidad', 'Plan de implementación y capacitación'],
-      nota: 'Inversión estimada de $10,000 a $18,000 MXN. El precio definitivo se establece mediante propuesta después de conocer las necesidades del negocio.'
+      nombre: 'GMZ Profesional', precio: 10000, unidad: 'MXN', destacado: false,
+      descripcion: 'Herramientas digitales para empresas que necesitan organizar y optimizar sus procesos.',
+      caracteristicas: ['CRM y sistemas administrativos', 'Gestión de clientes y seguimiento comercial', 'Módulos según las necesidades del negocio', 'Reportes, usuarios y procesos personalizados', 'Diagnóstico empresarial y propuesta de desarrollo'],
+      nota: 'Proyectos especializados de $10,000 a $18,000 MXN. El presupuesto final se presenta después del diagnóstico y definición de alcance.'
     }
   ],
   mantenimiento: [
     {
-      nombre: 'Web Care', precio: 200,
-      descripcion: 'Acompañamiento básico para mantener actualizada tu página web.',
-      caracteristicas: ['Ajustes menores de texto', 'Actualización sencilla de información', 'Revisión básica de enlaces y contenido'],
-      nota: 'Mensualidad. Cambios grandes, nuevas secciones y rediseños se cotizan aparte.'
+      nombre: 'Soporte Básico', precio: 300,
+      descripcion: 'Acompañamiento para mantener tu página o catálogo actualizado.',
+      caracteristicas: ['Actualizaciones menores de contenido', 'Cambios sencillos de productos o información', 'Revisión básica de funcionamiento'],
+      nota: 'Mensualidad. No incluye rediseños, nuevas secciones ni cambios ilimitados.'
     },
     {
-      nombre: 'Catalog Care', precio: 300,
-      descripcion: 'Apoyo para negocios que actualizan productos, fotografías y promociones.',
-      caracteristicas: ['Actualizaciones sencillas de productos', 'Cambios acordados de fotografías o precios', 'Apoyo para mantener categorías y contenido'],
-      nota: 'Mensualidad con alcance acordado. No incluye carga ilimitada de productos.'
-    },
-    {
-      nombre: 'Business Support', precio: 400,
-      descripcion: 'Soporte y seguimiento para sistemas administrativos implementados.',
-      caracteristicas: ['Soporte de uso', 'Revisión de incidencias', 'Ajustes menores previamente acordados'],
-      nota: 'Disponible para sistemas implementados. No incluye nuevas funciones, integraciones ni infraestructura de terceros.'
+      nombre: 'Soporte Profesional', precio: 600,
+      descripcion: 'Seguimiento para sistemas administrativos y soluciones empresariales.',
+      caracteristicas: ['Soporte de uso y atención de incidencias', 'Revisión general del sistema', 'Ajustes menores previamente acordados', 'Acompañamiento operativo'],
+      nota: 'Mensualidad. Nuevos módulos, integraciones, infraestructura y cambios mayores se cotizan por separado.'
     }
   ],
   proyectos: [
     { titulo: 'DNZ Mobiles', categoria: 'Catálogo digital · Proyecto real', descripcion: 'Catálogo de accesorios para celulares, desarrollado como muestra de trabajo comercial.', url: 'https://gamezun.github.io/DNZ-Mobiles/', iniciales: 'DNZ' }
   ],
   pasos: [
-    { titulo: 'Diagnóstico', descripcion: 'Conocemos tu negocio, tus procesos y lo que quieres mejorar.' },
-    { titulo: 'Propuesta y alcance', descripcion: 'Definimos entregables, tiempos, inversión y qué queda fuera del proyecto.' },
-    { titulo: 'Diseño y desarrollo', descripcion: 'Construimos la solución y revisamos contigo los avances.' },
-    { titulo: 'Entrega y seguimiento', descripcion: 'Publicamos, capacitamos y acordamos el soporte que necesitas.' }
+    { titulo: 'Diagnóstico', descripcion: 'Conocemos tu negocio y lo que necesitas mejorar.' },
+    { titulo: 'Propuesta', descripcion: 'Definimos alcance, tiempos e inversión.' },
+    { titulo: 'Desarrollo', descripcion: 'Diseñamos e implementamos la solución.' },
+    { titulo: 'Entrega y soporte', descripcion: 'Te acompañamos después de la puesta en marcha.' }
   ]
 };
