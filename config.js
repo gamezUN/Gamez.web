@@ -16,30 +16,42 @@ const CONFIG = {
   ],
   paquetes: [
     {
-      nombre: 'GMZ Básico', precio: 1500, unidad: 'MXN', destacado: true,
-      descripcion: 'La presencia digital que tu negocio necesita para comenzar a captar clientes.',
-      caracteristicas: ['Catálogo digital desde $1,500 MXN', 'Landing page empresarial desde $2,500 MXN', 'Diseño adaptable a celulares', 'Contacto directo por WhatsApp', 'Configuración y publicación'],
-      nota: 'El precio depende del tipo de página, contenido y alcance. Se define antes de iniciar.'
+      nombre: 'GMZ Básico', precio: 1500, precioTexto: 'Desde $1,500 MXN', unidad: 'MXN', destacado: true,
+      descripcion: 'Para negocios que quieren comenzar a verse profesionales en internet.',
+      caracteristicas: ['Catálogo digital o landing page', 'Diseño adaptable a celulares', 'Botón de contacto por WhatsApp', 'Configuración y publicación'],
+      nota: 'Catálogo desde $1,500 MXN. Landing page desde $2,500 MXN.'
     },
     {
-      nombre: 'GMZ Profesional', precio: 10000, unidad: 'MXN', destacado: false,
-      descripcion: 'Herramientas digitales para empresas que necesitan organizar y optimizar sus procesos.',
-      caracteristicas: ['CRM y sistemas administrativos', 'Gestión de clientes y seguimiento comercial', 'Módulos según las necesidades del negocio', 'Reportes, usuarios y procesos personalizados', 'Diagnóstico empresarial y propuesta de desarrollo'],
-      nota: 'Proyectos especializados de $10,000 a $18,000 MXN. El presupuesto final se presenta después del diagnóstico y definición de alcance.'
+      nombre: 'GMZ Crecimiento', precio: 6000, precioTexto: 'Desde $6,000 MXN', unidad: 'MXN', destacado: false,
+      descripcion: 'Para negocios que necesitan organizar clientes, ventas y tareas administrativas.',
+      caracteristicas: ['CRM administrativo base GMZ', 'Registro y seguimiento de clientes', 'Organización de oportunidades y ventas', 'Panel de consulta y control'],
+      nota: 'La versión base se cotiza entre $6,000 y $8,000 MXN, según configuración y alcance.'
+    },
+    {
+      nombre: 'GMZ Profesional', precio: 10000, precioTexto: 'Desde $10,000 MXN', unidad: 'MXN', destacado: false,
+      descripcion: 'Para empresas que requieren procesos digitales diseñados a su manera.',
+      caracteristicas: ['Sistemas administrativos personalizados', 'Módulos y permisos según operación', 'Reportes y flujos de trabajo', 'Integraciones sujetas a diagnóstico'],
+      nota: 'Proyectos especializados de $10,000 a $18,000 MXN. Se define después del diagnóstico.'
     }
   ],
   mantenimiento: [
     {
       nombre: 'Soporte Básico', precio: 300,
-      descripcion: 'Acompañamiento para mantener tu página o catálogo actualizado.',
-      caracteristicas: ['Actualizaciones menores de contenido', 'Cambios sencillos de productos o información', 'Revisión básica de funcionamiento'],
-      nota: 'Mensualidad. No incluye rediseños, nuevas secciones ni cambios ilimitados.'
+      descripcion: 'Para páginas y catálogos que requieren actualizaciones ocasionales.',
+      caracteristicas: ['Cambios menores de texto e imágenes', 'Actualización sencilla de productos', 'Revisión básica de funcionamiento'],
+      nota: 'Mensualidad. No incluye rediseños ni cambios ilimitados.'
     },
     {
-      nombre: 'Soporte Profesional', precio: 600,
-      descripcion: 'Seguimiento para sistemas administrativos y soluciones empresariales.',
-      caracteristicas: ['Soporte de uso y atención de incidencias', 'Revisión general del sistema', 'Ajustes menores previamente acordados', 'Acompañamiento operativo'],
-      nota: 'Mensualidad. Nuevos módulos, integraciones, infraestructura y cambios mayores se cotizan por separado.'
+      nombre: 'Soporte Crecimiento', precio: 600,
+      descripcion: 'Para negocios que utilizan su sitio o CRM de forma continua.',
+      caracteristicas: ['Soporte de uso y dudas', 'Revisión general mensual', 'Ajustes menores previamente acordados', 'Apoyo con registros y configuración'],
+      nota: 'Mensualidad. Nuevos módulos y funciones se cotizan por separado.'
+    },
+    {
+      nombre: 'Soporte Profesional', precio: 1000,
+      descripcion: 'Para sistemas personalizados que necesitan seguimiento más cercano.',
+      caracteristicas: ['Atención prioritaria de incidencias', 'Revisión preventiva del sistema', 'Ajustes menores acordados', 'Acompañamiento operativo'],
+      nota: 'Mensualidad. No incluye infraestructura, servicios externos ni desarrollo de módulos nuevos.'
     }
   ],
   proyectos: [
