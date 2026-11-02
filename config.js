@@ -4,57 +4,69 @@
    ========================================================= */
 const CONFIG = {
   marca: 'GÁMEZ WEB',
-  subtitulo: 'Soluciones digitales y desarrollo web',
-  titular: 'Tu negocio merece una mejor presencia y operación digital.',
-  descripcion: 'Diseñamos y desarrollamos páginas web, catálogos digitales y herramientas de gestión para negocios. Primero entendemos tus necesidades; después proponemos una solución con alcance, tiempos y costos claros.',
+  subtitulo: 'Soluciones digitales, sistemas empresariales y desarrollo web',
+  titular: 'Tecnología que organiza tu negocio y lo impulsa a crecer.',
+  descripcion: 'Creamos sitios web, catálogos, tiendas en línea y sistemas de gestión para negocios. Desde soluciones listas para implementar hasta plataformas desarrolladas a la medida de tus procesos.',
   correo: 'gamez.desarrolloweb@gmail.com',
   whatsapp: '527474202033',
   ubicacion: 'Nuevo León, México',
   mostrarPrecios: true,
   servicios: [
-    { icono: '◈', titulo: 'Páginas web', descripcion: 'Presenta tu negocio, servicios, horarios y medios de contacto con una experiencia profesional y adaptable a celulares.' },
-    { icono: '▦', titulo: 'Catálogos digitales', descripcion: 'Organiza tus productos por categorías, muestra fotografías y facilita que tus clientes soliciten información.' },
-    { icono: '⚙', titulo: 'Sistemas de gestión', descripcion: 'Diseño de paneles administrativos y herramientas para organizar clientes, proyectos y procesos del negocio, según diagnóstico.' },
-    { icono: '↗', titulo: 'Soporte y evolución', descripcion: 'Actualizaciones de contenido, mejoras y acompañamiento con un alcance acordado.' }
+    { icono: '◈', titulo: 'Páginas web empresariales', descripcion: 'Sitios profesionales para presentar tu empresa, servicios, sucursales, horarios y medios de contacto.' },
+    { icono: '▦', titulo: 'Catálogos digitales', descripcion: 'Catálogos organizados por categorías, con fotografías, fichas de producto y contacto directo por WhatsApp.' },
+    { icono: '▤', titulo: 'Tiendas en línea', descripcion: 'Experiencias de compra con catálogo, carrito y flujo de pedidos. Los pagos en línea se integran según proveedor y alcance.' },
+    { icono: '◎', titulo: 'CRM y gestión de clientes', descripcion: 'Herramientas para centralizar contactos, oportunidades, seguimiento comercial y actividad del negocio.' },
+    { icono: '▣', titulo: 'Sistemas administrativos', descripcion: 'Paneles para organizar operaciones, ventas, registros, usuarios e información de acuerdo con cada negocio.' },
+    { icono: '▥', titulo: 'Inventarios y productos', descripcion: 'Control de productos, existencias, movimientos y consultas para tener mejor visibilidad de la operación.' },
+    { icono: '▦', titulo: 'Reservaciones y agendas', descripcion: 'Sistemas para administrar citas, fechas, solicitudes y disponibilidad de servicios.' },
+    { icono: '⌘', titulo: 'Automatización de procesos', descripcion: 'Reducción de tareas repetitivas mediante formularios, notificaciones, reportes e integraciones viables.' },
+    { icono: '↗', titulo: 'Integraciones y soluciones a medida', descripcion: 'Conexión con herramientas externas y desarrollo de módulos especiales después de evaluar requisitos y viabilidad.' },
+    { icono: '⚙', titulo: 'Mantenimiento y soporte', descripcion: 'Actualizaciones de contenido, corrección de incidencias y mejoras con un alcance previamente acordado.' }
   ],
   paquetes: [
     {
-      nombre: 'Presencia Digital', precio: 1499, unidad: 'MXN', destacado: false,
-      descripcion: 'Una presencia profesional para que tus clientes encuentren y conozcan tu negocio.',
-      caracteristicas: ['Página web informativa', 'Diseño adaptable a celulares', 'Información, horarios y ubicación', 'Botón directo a WhatsApp', 'Catálogo básico o muestra de servicios'],
-      nota: 'Pago inicial. Dominio propio y funciones adicionales se cotizan por separado.'
+      nombre: 'Presencia Digital', precio: 2500, unidad: 'MXN', destacado: false,
+      descripcion: 'Una página profesional para presentar tu negocio y facilitar que nuevos clientes te contacten.',
+      caracteristicas: ['Diseño web profesional', 'Adaptación a celulares y computadoras', 'Información, servicios y ubicación', 'Botón directo a WhatsApp', 'Formulario o medios de contacto'],
+      nota: 'Pago inicial. Dominio, alojamiento de pago y funciones adicionales se cotizan por separado.'
     },
     {
-      nombre: 'Digital Business', precio: 2999, unidad: 'MXN', destacado: true,
-      descripcion: 'Para negocios que necesitan presentar y actualizar sus productos o servicios.',
-      caracteristicas: ['Todo lo incluido en Presencia Digital', 'Catálogo digital administrable', 'Organización de productos por categorías', 'Formularios de contacto', 'Configuración y capacitación básica'],
-      nota: 'Pago inicial. La cantidad de productos y el alcance de administración se definen en la cotización.'
+      nombre: 'Catálogo Digital', precio: 1500, unidad: 'MXN', destacado: true,
+      descripcion: 'Muestra tus productos de forma organizada y facilita las consultas y pedidos.',
+      caracteristicas: ['Catálogo web de productos', 'Organización por categorías', 'Fotografías y descripciones', 'Acceso directo a WhatsApp', 'Diseño adaptable a celulares'],
+      nota: 'Precio inicial para catálogo de alcance básico. Cantidad de productos, filtros y administración se definen en la cotización.'
     },
     {
-      nombre: 'Business Management', precio: 4999, unidad: 'MXN', destacado: false,
-      descripcion: 'Una solución administrativa diseñada alrededor de los procesos de tu negocio.',
-      caracteristicas: ['Sitio web y catálogo según alcance', 'Diagnóstico de procesos administrativos', 'Diseño de CRM para clientes y proyectos', 'Planeación de control de pagos y seguimiento', 'Configuración y capacitación acordadas'],
-      nota: 'Desde este precio. El CRM y sus módulos requieren diagnóstico, cotización y validación técnica; no se ofrece aún como plataforma multiempresa lista para usar. Integraciones de pago e IA no están incluidas.'
+      nombre: 'GMZ CRM Base', precio: 7500, unidad: 'MXN', destacado: false,
+      descripcion: 'Implementación y configuración de nuestra solución administrativa base para negocios que necesitan centralizar su operación.',
+      caracteristicas: ['Acceso a la plataforma CRM base existente', 'Configuración inicial para el negocio', 'Organización de clientes y actividad comercial', 'Panel administrativo y herramientas disponibles en la versión base', 'Puesta en marcha y capacitación inicial'],
+      nota: 'Desde $6,000 y hasta $8,000 MXN según configuración. Se presenta una demostración para revisar los módulos disponibles y confirmar el alcance antes de contratar.'
+    },
+    {
+      nombre: 'CRM Especializado', precio: 10000, unidad: 'MXN', destacado: false,
+      descripcion: 'Un sistema diseñado alrededor de los procesos, roles y necesidades específicas de tu empresa.',
+      caracteristicas: ['Reunión de diagnóstico y levantamiento de requisitos', 'Diseño de módulos y flujos personalizados', 'Paneles, reportes y permisos según alcance', 'Integraciones y automatizaciones sujetas a viabilidad', 'Plan de implementación y capacitación'],
+      nota: 'Inversión estimada de $10,000 a $18,000 MXN. El precio definitivo se establece mediante propuesta después de conocer las necesidades del negocio.'
     }
   ],
   mantenimiento: [
     {
-      nombre: 'Web Care', precio: 149,
-      descripcion: 'Para mantener actualizada la información de tu página.',
+      nombre: 'Web Care', precio: 200,
+      descripcion: 'Acompañamiento básico para mantener actualizada tu página web.',
       caracteristicas: ['Ajustes menores de texto', 'Actualización sencilla de información', 'Revisión básica de enlaces y contenido'],
       nota: 'Mensualidad. Cambios grandes, nuevas secciones y rediseños se cotizan aparte.'
     },
     {
-      nombre: 'Catalog Care', precio: 249,
-      descripcion: 'Para negocios que actualizan productos y promociones.',
+      nombre: 'Catalog Care', precio: 300,
+      descripcion: 'Apoyo para negocios que actualizan productos, fotografías y promociones.',
       caracteristicas: ['Actualizaciones sencillas de productos', 'Cambios acordados de fotografías o precios', 'Apoyo para mantener categorías y contenido'],
       nota: 'Mensualidad con alcance acordado. No incluye carga ilimitada de productos.'
     },
     {
-      nombre: 'Business Support', precio: 399,
-      descripcion: 'Acompañamiento para sistemas administrativos implementados.',
+      nombre: 'Business Support', precio: 400,
+      descripcion: 'Soporte y seguimiento para sistemas administrativos implementados.',
       caracteristicas: ['Soporte de uso', 'Revisión de incidencias', 'Ajustes menores previamente acordados'],
-      nota: 'Disponible cuando el sistema esté implementado y validado. No incluye nuevas funciones ni infraestructura de terceros.'
+      nota: 'Disponible para sistemas implementados. No incluye nuevas funciones, integraciones ni infraestructura de terceros.'
     }
   ],
   proyectos: [
