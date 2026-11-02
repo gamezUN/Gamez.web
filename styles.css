@@ -700,3 +700,24 @@ footer {
 .mantenimientos .mantenimiento { background: linear-gradient(155deg, #111e34, #0d192d); }
 .mantenimiento .precio small { display: inline-block; font: 500 12px 'DM Sans', Arial, sans-serif; color: var(--suave); }
 .paquete .precio small { display: inline-block; font: 500 11px 'DM Sans', Arial, sans-serif; color: var(--suave); margin-left: 4px; }
+
+/* Tarjetas ampliadas y página de información */
+.enlace-cotizar { display:block; text-align:center; margin-top:13px; color:var(--azulclaro); font-size:12px; font-weight:700; }
+.paquete .boton { margin-top:12px; }
+.detalle-hero { padding:100px 0 70px; max-width:780px; }
+.detalle-hero h1 { font-size:clamp(40px,5vw,64px); }
+.detalle-hero>p:last-child { color:var(--suave); max-width:720px; }
+.detalle-seccion { padding:55px 0 85px; scroll-margin-top:90px; }
+.detalle-seccion>h2 { font-size:clamp(30px,3.5vw,44px); margin-bottom:32px; }
+.detalle-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
+.detalle-card { background:var(--tarjeta); border:1px solid var(--linea); border-radius:var(--radio); padding:32px; scroll-margin-top:100px; }
+.detalle-card h2 { font-size:30px; margin-bottom:12px; }
+.detalle-card h3 { font-size:17px; margin-top:28px; }
+.detalle-card p,.detalle-card li { color:var(--suave); font-size:14px; }
+.detalle-card .detalle-precio { color:var(--azulclaro); font:700 25px 'Space Grotesk',sans-serif; }
+.detalle-card ul { padding-left:20px; margin:18px 0 25px; }
+.detalle-card li { padding:7px 0; }
+.detalle-intro { color:var(--suave); max-width:760px; }
+.detalle-contacto { margin:20px 0 90px; padding:42px; border:1px solid #245493; border-radius:22px; background:linear-gradient(120deg,#10264a,#0b162b 75%); }
+.detalle-contacto p { color:var(--suave); }
+@media(max-width:700px) { .detalle-grid { grid-template-columns:1fr; } .detalle-hero { padding:65px 0 45px; } .detalle-card { padding:24px; } .detalle-contacto { padding:28px 22px; } }
