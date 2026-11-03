@@ -745,3 +745,16 @@ footer {
 .plan-detalle .boton { margin-top:auto; width:100%; }
 .plan-detalle .nota { font-size:12px; line-height:1.75; }
 @media(max-width:700px){.categoria-card .descripcion{min-height:0;}}
+
+
+/* Condiciones comunes de los tres planes */
+.condiciones-planes{margin-top:34px;padding:24px 28px;border:1px solid rgba(99,197,255,.2);border-radius:18px;background:linear-gradient(120deg,rgba(12,28,49,.92),rgba(7,14,26,.92));box-shadow:inset 0 1px rgba(255,255,255,.04)}
+.condiciones-planes p{margin:0 0 12px;color:#eaf4ff;font:600 15px 'Space Grotesk',sans-serif}
+.condiciones-planes ul{margin:0;padding-left:19px;display:grid;gap:8px;color:#aab9cf;font-size:12px;line-height:1.75}
+.condiciones-planes li::marker{color:var(--azulclaro)}
+.paquete{min-height:100%;padding:32px 29px}
+.paquete.destacado{transform:translateY(-9px)}
+.paquete .precio{font-size:clamp(26px,2.5vw,34px);white-space:nowrap}
+.paquete li{line-height:1.6}
+@media(max-width:850px){.paquetes{grid-template-columns:1fr 1fr}.paquete.destacado{transform:none}}
+@media(max-width:600px){.paquetes{grid-template-columns:1fr}.paquete{padding:27px 23px}.condiciones-planes{padding:21px}.paquete .precio{font-size:30px}}

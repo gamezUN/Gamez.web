@@ -35,7 +35,6 @@ const CONFIG = {
         'Seguimiento de oportunidades comerciales',
         'Panel administrativo básico',
         'Organización y consulta de información',
-        'Opción de integrar botón de pago (costo adicional)'
       ],
       mensaje: 'Hola, me interesa el plan 02 Business de GÁMEZ WEB. Quisiera revisar cómo organizar los clientes y ventas de mi negocio.'
     },
@@ -47,7 +46,6 @@ const CONFIG = {
         'Módulos y procesos internos',
         'Reportes y estadísticas',
         'Automatizaciones e integraciones según alcance',
-        'Opción de integrar botón de pago (costo adicional)'
       ],
       mensaje: 'Hola, me interesa el plan 03 Management de GÁMEZ WEB. Quisiera solicitar un diagnóstico para un sistema administrativo.'
     }
