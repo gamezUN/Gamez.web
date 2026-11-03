@@ -735,3 +735,13 @@ footer {
     transition-duration: .01ms !important;
   }
 }
+
+
+/* Ajustes del catálogo por categorías */
+.categoria-card .descripcion { min-height:82px; line-height:1.8; }
+.categoria-card .boton { width:100%; margin-top:16px; }
+.plan-detalle { display:flex; flex-direction:column; }
+.plan-detalle .detalle-precio small { display:block; font:500 11px 'DM Sans',sans-serif; color:var(--suave); letter-spacing:0; margin-top:3px; }
+.plan-detalle .boton { margin-top:auto; width:100%; }
+.plan-detalle .nota { font-size:12px; line-height:1.75; }
+@media(max-width:700px){.categoria-card .descripcion{min-height:0;}}
