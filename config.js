@@ -1,129 +1,49 @@
-/* GÁMEZ WEB — servicios, líneas comerciales y precios iniciales */
+/* GÁMEZ WEB — catálogo comercial */
 const CONFIG = {
   marca: 'GÁMEZ WEB',
   subtitulo: 'Soluciones digitales para negocios',
-  titular: 'Tu negocio, listo para crecer en digital.',
-  descripcion: 'Creamos páginas web, catálogos y sistemas que ayudan a los negocios a vender, organizarse y trabajar mejor.',
+  titular: 'Soluciones digitales para hacer crecer tu negocio.',
+  descripcion: 'Páginas web, herramientas comerciales y sistemas administrativos diseñados según la etapa y las necesidades de cada negocio.',
   correo: 'gamez.desarrolloweb@gmail.com',
   whatsapp: '527474202033',
   ubicacion: 'Nuevo León, México',
   mostrarPrecios: true,
   servicios: [
-    { icono: '◈', titulo: 'Presencia digital', descripcion: 'Landing pages y páginas web empresariales para presentar tu negocio y atraer clientes.' },
-    { icono: '▦', titulo: 'Catálogos y ventas', descripcion: 'Catálogos digitales y tiendas en línea para mostrar productos y recibir pedidos.' },
-    { icono: '▣', titulo: 'Administración empresarial', descripcion: 'CRM, control de clientes, ventas y herramientas para organizar la operación.' },
-    { icono: '⚙', titulo: 'Desarrollo personalizado', descripcion: 'Sistemas e integraciones diseñados a partir de las necesidades de cada empresa.' }
+    { icono: '◈', titulo: 'Presencia digital', descripcion: 'Páginas web y catálogos para presentar tu negocio y facilitar el contacto con clientes.' },
+    { icono: '▦', titulo: 'Herramientas comerciales', descripcion: 'Soluciones para recibir solicitudes, organizar prospectos y dar seguimiento.' },
+    { icono: '▣', titulo: 'Administración empresarial', descripcion: 'Sistemas y paneles para organizar información y procesos internos.' },
+    { icono: '⚙', titulo: 'Desarrollo a medida', descripcion: 'Funciones e integraciones definidas a partir de un diagnóstico.' }
   ],
-  lineas: [
+  categorias: [
     {
-      slug: 'presencia',
-      nombre: 'Presencia Digital',
-      precioDesde: 'Desde $1,500 MXN',
-      resumen: 'Haz que tu negocio se vea profesional, sea fácil de encontrar y tenga un canal claro para recibir consultas.',
-      enfoque: 'Ideal para negocios que necesitan presentar sus servicios, productos y datos de contacto en internet.',
+      id: 'presencia', nombre: 'Presencia', etiqueta: 'PRESENCIA DIGITAL',
+      resumen: 'Haz que tu negocio se vea profesional, muestre lo que ofrece y facilite que nuevos clientes te contacten.',
+      descripcion: 'Soluciones web para presentar tu negocio, exhibir productos o servicios y generar contactos.',
       planes: [
-        {
-          nombre: 'Catálogo Esencial',
-          precio: '$1,500 MXN',
-          descripcion: 'Muestra tus productos o servicios en un catálogo digital sencillo y fácil de compartir.',
-          caracteristicas: ['Diseño visual con identidad del negocio', 'Secciones de productos o servicios', 'Botón directo a WhatsApp', 'Diseño adaptable a celular'],
-          mensaje: 'Hola, me interesa el plan Catálogo Esencial de GÁMEZ WEB. Quiero mostrar mis productos o servicios en un catálogo digital. ¿Podemos revisar qué información necesitas y los siguientes pasos?'
-        },
-        {
-          nombre: 'Landing Profesional',
-          precio: '$2,500 MXN',
-          descripcion: 'Una página enfocada en presentar tu negocio y convertir visitas en consultas.',
-          caracteristicas: ['Sección principal y presentación del negocio', 'Servicios o productos destacados', 'Formulario o contacto por WhatsApp', 'Diseño adaptable y publicación'],
-          mensaje: 'Hola, vi el plan Landing Profesional de GÁMEZ WEB y me interesa para mi negocio. Quiero una página que presente mis servicios y ayude a recibir clientes. ¿Podemos agendar un diagnóstico?'
-        },
-        {
-          nombre: 'Sitio Empresarial',
-          precio: '$4,500 MXN',
-          descripcion: 'Un sitio web más completo para comunicar la propuesta de valor y generar confianza.',
-          caracteristicas: ['Varias secciones informativas', 'Presentación de servicios y empresa', 'Galería o portafolio', 'Contacto y enlaces a redes sociales', 'Diseño adaptable a celulares'],
-          mensaje: 'Hola, me interesa el plan Sitio Empresarial de GÁMEZ WEB. Busco una página más completa para presentar mi empresa y sus servicios. ¿Podemos conversar sobre el alcance y una cotización?'
-        }
+        { nombre: 'Esencial', precio: '$1,499', descripcion: 'Una primera presencia profesional para negocios que necesitan información clara en internet.', incluye: ['Landing page de una sola página', 'Información del negocio y servicios', 'Botón directo a WhatsApp', 'Diseño adaptable a celular', 'Publicación y configuración inicial'], mensaje: 'Hola, me interesa el plan Presencia Esencial de GÁMEZ WEB. Quisiera conocer el alcance y los siguientes pasos.' },
+        { nombre: 'Catálogo', precio: '$1,500', descripcion: 'Muestra tus productos o servicios en un catálogo digital fácil de consultar y compartir.', incluye: ['Catálogo digital organizado por categorías', 'Fotografías, descripciones y precios proporcionados por el negocio', 'Botones para solicitar por WhatsApp', 'Diseño adaptable a celular', 'Carga inicial acordada de productos'], mensaje: 'Hola, me interesa el plan Presencia Catálogo. Quisiera mostrar mis productos en un catálogo digital. ¿Podemos revisar los detalles?' },
+        { nombre: 'Empresarial', precio: '$2,999', descripcion: 'Un sitio más completo para explicar tu negocio, fortalecer tu imagen y captar solicitudes.', incluye: ['Sitio web de varias secciones', 'Información de empresa, servicios y contacto', 'Formulario de solicitud o cotización', 'Integración con WhatsApp y redes', 'Diseño adaptable y publicación'], mensaje: 'Hola, me interesa el plan Presencia Empresarial de GÁMEZ WEB. Quisiera platicar sobre el sitio web de mi negocio.' }
       ]
     },
     {
-      slug: 'business',
-      nombre: 'Business',
-      precioDesde: 'Desde $2,999 MXN',
-      resumen: 'Convierte tu presencia digital en una herramienta comercial para mostrar productos, recibir pedidos y facilitar el proceso de venta.',
-      enfoque: 'Pensado para negocios que quieren organizar mejor su catálogo y hacer más sencillo el contacto con sus clientes.',
+      id: 'business', nombre: 'Business', etiqueta: 'GESTIÓN COMERCIAL',
+      resumen: 'Organiza prospectos, clientes y oportunidades para dar seguimiento y no perder de vista cada venta.',
+      descripcion: 'Herramientas comerciales para ordenar la atención, registrar oportunidades y dar seguimiento a clientes.',
       planes: [
-        {
-          nombre: 'Business Catalog',
-          precio: '$2,999 MXN',
-          descripcion: 'Un catálogo comercial estructurado para presentar productos y facilitar solicitudes de compra.',
-          caracteristicas: ['Catálogo organizado por categorías', 'Fichas con imágenes y descripción', 'Búsqueda o filtros básicos', 'Solicitudes de pedido por WhatsApp'],
-          mensaje: 'Hola, me interesa Business Catalog de GÁMEZ WEB. Quiero organizar mis productos en un catálogo comercial y recibir solicitudes por WhatsApp. ¿Qué necesitas para preparar mi propuesta?'
-        },
-        {
-          nombre: 'Business Sales',
-          precio: '$4,999 MXN',
-          descripcion: 'Una experiencia comercial con más herramientas para recibir y dar seguimiento a solicitudes.',
-          caracteristicas: ['Catálogo comercial', 'Formulario de solicitud o pedido', 'Registro de datos del cliente', 'Flujo de contacto y seguimiento', 'Panel básico según alcance'],
-          mensaje: 'Hola, quiero información del plan Business Sales de GÁMEZ WEB. Me interesa facilitar los pedidos y dar seguimiento a mis clientes desde una solución digital. ¿Podemos revisar mi proceso actual?'
-        },
-        {
-          nombre: 'Business Online',
-          precio: 'Desde $7,500 MXN',
-          descripcion: 'Una tienda en línea con funciones comerciales definidas de acuerdo con el tipo de producto y operación.',
-          caracteristicas: ['Catálogo y páginas de producto', 'Carrito o flujo de pedido según proyecto', 'Integración de pago sujeta al proveedor', 'Confirmaciones y datos de compra', 'Configuración y pruebas antes de publicar'],
-          mensaje: 'Hola, me interesa Business Online de GÁMEZ WEB para vender mis productos por internet. Quisiera revisar el catálogo, el proceso de compra y las opciones de pago para recibir una cotización.'
-        }
+        { nombre: 'Business Start', precio: 'Desde $3,500', descripcion: 'Un punto de partida para registrar contactos y mantener orden comercial.', incluye: ['Registro centralizado de prospectos', 'Datos de contacto y notas', 'Estatus básico de seguimiento', 'Búsqueda y consulta de registros', 'Configuración inicial'], mensaje: 'Hola, me interesa Business Start para organizar los prospectos de mi negocio. ¿Podemos revisar qué necesito?' },
+        { nombre: 'Business CRM', precio: 'Desde $6,000', descripcion: 'Un CRM administrativo base para gestionar clientes y oportunidades de venta.', incluye: ['Registro y seguimiento de clientes', 'Etapas y estatus de oportunidades', 'Historial de notas y actividades', 'Panel de consulta y control', 'Capacitación inicial'], mensaje: 'Hola, me interesa el plan Business CRM. Busco dar seguimiento a mis clientes y oportunidades de venta. Quisiera una cotización.' },
+        { nombre: 'Business Pro', precio: 'Desde $8,000', descripcion: 'Una gestión comercial más completa, con reportes y procesos ajustados a tu operación.', incluye: ['Funciones del CRM base', 'Panel con indicadores y reportes', 'Filtros y organización avanzada', 'Flujos de seguimiento acordados', 'Ajustes según diagnóstico'], mensaje: 'Hola, me interesa Business Pro para mejorar el control comercial de mi empresa. ¿Podemos agendar un diagnóstico?' }
       ]
     },
     {
-      slug: 'management',
-      nombre: 'Management',
-      precioDesde: 'Desde $7,000 MXN',
-      resumen: 'Digitaliza tareas administrativas y mejora el control de clientes, oportunidades, ventas y procesos internos.',
-      enfoque: 'Para empresas que necesitan centralizar información y reducir el trabajo manual en su operación.',
+      id: 'management', nombre: 'Management', etiqueta: 'SISTEMAS Y ADMINISTRACIÓN',
+      resumen: 'Digitaliza procesos internos con sistemas personalizados para administrar información y trabajar con mayor control.',
+      descripcion: 'Sistemas administrativos y desarrollos personalizados para procesos que requieren algo más que un CRM convencional.',
       planes: [
-        {
-          nombre: 'Management Basic',
-          precio: '$7,000 MXN',
-          descripcion: 'Un CRM administrativo inicial para registrar clientes y mantener seguimiento de oportunidades.',
-          caracteristicas: ['Registro y consulta de clientes', 'Etapas básicas de seguimiento', 'Notas y datos de contacto', 'Panel general de registros'],
-          mensaje: 'Hola, me interesa Management Basic de GÁMEZ WEB. Necesito organizar los datos de mis clientes y dar seguimiento a mis oportunidades de venta. ¿Podemos revisar cómo trabaja actualmente mi negocio?'
-        },
-        {
-          nombre: 'Management Advanced',
-          precio: 'Desde $10,000 MXN',
-          descripcion: 'Un sistema de gestión con módulos y reportes ajustados al flujo de trabajo del negocio.',
-          caracteristicas: ['Módulos según las necesidades detectadas', 'Filtros y búsqueda de registros', 'Indicadores y reportes básicos', 'Roles o permisos según alcance', 'Capacitación inicial'],
-          mensaje: 'Hola, quiero información de Management Advanced de GÁMEZ WEB. Busco un sistema para administrar mejor mis procesos, consultar información y obtener reportes. Me gustaría solicitar un diagnóstico.'
-        },
-        {
-          nombre: 'Management Custom',
-          precio: '$16,000–$18,000 MXN',
-          descripcion: 'Desarrollo de un sistema administrativo especializado, definido a partir de un diagnóstico y alcance acordado.',
-          caracteristicas: ['Análisis del proceso de la empresa', 'Diseño de módulos personalizados', 'Flujos de trabajo específicos', 'Reportes e integraciones por alcance', 'Pruebas, entrega y capacitación'],
-          mensaje: 'Hola, me interesa Management Custom de GÁMEZ WEB. Necesito evaluar un sistema administrativo personalizado para mi empresa. Quisiera agendar un diagnóstico para definir módulos, tiempos e inversión.'
-        }
+        { nombre: 'Management Base', precio: 'Desde $7,000', descripcion: 'Un sistema administrativo sencillo para centralizar información y tareas específicas.', incluye: ['Módulo administrativo definido', 'Captura y consulta de información', 'Tablas y filtros de registros', 'Interfaz adaptable', 'Configuración y capacitación'], mensaje: 'Hola, me interesa Management Base. Necesito digitalizar un proceso administrativo de mi negocio. Quisiera explicarles cómo trabajamos.' },
+        { nombre: 'Management Plus', precio: 'Desde $10,000', descripcion: 'Un sistema con varios módulos conectados para dar seguimiento a procesos internos.', incluye: ['Múltiples módulos según diagnóstico', 'Relación entre registros y procesos', 'Roles o permisos según alcance', 'Reportes operativos', 'Capacitación y puesta en marcha'], mensaje: 'Hola, me interesa Management Plus para desarrollar un sistema administrativo con varios módulos. ¿Podemos revisar mis procesos y cotizar?' },
+        { nombre: 'Management Custom', precio: 'Desde $18,000', descripcion: 'Desarrollo especializado para necesidades particulares e integraciones previamente evaluadas.', incluye: ['Arquitectura y módulos personalizados', 'Flujos de trabajo específicos', 'Integraciones sujetas a viabilidad', 'Paneles y reportes a medida', 'Plan de implementación por etapas'], mensaje: 'Hola, me interesa Management Custom. Tengo un proyecto de software a medida y quisiera solicitar un diagnóstico y una propuesta.' }
       ]
-    }
-  ],
-  mantenimiento: [
-    {
-      nombre: 'Soporte Básico', precio: 300,
-      descripcion: 'Para páginas y catálogos que requieren actualizaciones ocasionales.',
-      caracteristicas: ['Cambios menores de texto e imágenes', 'Actualización sencilla de productos', 'Revisión básica de funcionamiento'],
-      nota: 'Mensualidad. No incluye rediseños ni cambios ilimitados.'
-    },
-    {
-      nombre: 'Soporte Crecimiento', precio: 600,
-      descripcion: 'Para negocios que utilizan su sitio o CRM de forma continua.',
-      caracteristicas: ['Soporte de uso y dudas', 'Revisión general mensual', 'Ajustes menores previamente acordados', 'Apoyo con registros y configuración'],
-      nota: 'Mensualidad. Nuevos módulos y funciones se cotizan por separado.'
-    },
-    {
-      nombre: 'Soporte Profesional', precio: 1000,
-      descripcion: 'Para sistemas personalizados que necesitan seguimiento más cercano.',
-      caracteristicas: ['Atención prioritaria de incidencias', 'Revisión preventiva del sistema', 'Ajustes menores acordados', 'Acompañamiento operativo'],
-      nota: 'Mensualidad. No incluye infraestructura, servicios externos ni desarrollo de módulos nuevos.'
     }
   ],
   proyectos: [
