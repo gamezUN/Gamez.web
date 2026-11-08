@@ -3,120 +3,106 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#020202">
-  <meta name="description" content="GMZ ENTERPRISE diseña y desarrolla soluciones digitales, sistemas empresariales y herramientas tecnológicas para negocios.">
-  <title>GMZ ENTERPRISE — Technology &amp; Business Solutions</title>
+  <meta name="theme-color" content="#080b11">
+  <meta name="description" content="GMZ Digital Solutions diseña y desarrolla páginas web profesionales para negocios. Diseño web, landing pages y catálogos digitales.">
+  <title>GMZ Digital Solutions — Diseño y desarrollo web</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="config.js" defer></script>
   <script src="script.js" defer></script>
-  <script type="module" src="portal-field.js"></script>
 </head>
 <body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="GMZ Digital Solutions, inicio">
+      <span class="brand__symbol">GMZ<span>.</span></span>
+      <span class="brand__name">DIGITAL SOLUTIONS</span>
+    </a>
+    <nav class="main-nav" aria-label="Navegación principal">
+      <a href="#servicios">Servicios</a><a href="#proyectos">Proyectos</a><a href="#nosotros">Nosotros</a>
+      <a class="nav-cta" href="#contacto">Hablemos <span>↗</span></a>
+    </nav>
+  </header>
+
   <main>
-    <section class="portal" id="inicio" aria-labelledby="hero-title">
-      <div class="portal__webgl" aria-hidden="true"><canvas id="portal-canvas"></canvas></div>
-      <div class="portal__frame" aria-hidden="true">
-        <i class="portal__tick portal__tick--tl"></i><i class="portal__tick portal__tick--tr"></i>
-        <i class="portal__tick portal__tick--bl"></i><i class="portal__tick portal__tick--br"></i>
-      </div>
-      <header class="portal__topbar">
-        <a class="brand" href="#inicio" aria-label="GMZ Enterprise, inicio">
-          <span class="brand__mark">GMZ</span><span>GMZ ENTERPRISE</span>
-        </a>
-        <nav class="portal__nav" aria-label="Navegación principal">
-          <a href="#soluciones">Soluciones</a><a href="#proyectos">Proyectos</a><a href="#proceso">Método</a>
-          <a class="portal__nav-cta" href="#contacto">Contacto ↗</a>
-        </nav>
-        <span class="portal__top-meta">TECHNOLOGY &amp; BUSINESS SOLUTIONS</span>
-      </header>
-
-      <span class="portal__side-label" aria-hidden="true">ENGINEERED FOR WHAT'S NEXT</span>
-
-      <div class="portal__content">
-        <p class="eyebrow"><span class="eyebrow__line"></span> DIGITAL INFRASTRUCTURE / 001</p>
-        <h1 class="portal__headline" id="hero-title">
-          <span class="headline-line"><span>Engineering</span></span>
-          <span class="headline-line"><span>what moves</span></span>
-          <span class="headline-line"><span>business forward.</span></span>
-        </h1>
-        <p class="portal__intro">Diseñamos tecnología, sistemas y soluciones digitales que ayudan a las empresas a operar mejor, conectar sus procesos y avanzar con claridad.</p>
-        <div class="portal__actions">
-          <a class="button button--light" href="#soluciones">Explore solutions <span aria-hidden="true">↗</span></a>
-          <a class="button button--ghost" href="#contacto">Iniciar un proyecto</a>
+    <section class="hero" id="inicio">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="hero__content">
+        <p class="eyebrow"><span></span> DISEÑO WEB · DESARROLLO DIGITAL</p>
+        <h1>Tu negocio merece<br>una <span>gran presencia</span><br>en internet.</h1>
+        <p class="hero__description">Diseñamos páginas web profesionales que presentan tu negocio, transmiten confianza y ayudan a tus clientes a dar el siguiente paso.</p>
+        <div class="hero__actions">
+          <a class="button button--primary" href="#contacto">Cuéntanos tu proyecto <span>↗</span></a>
+          <a class="button button--secondary" href="#servicios">Conoce los servicios</a>
         </div>
+        <div class="hero__proof"><span class="proof-dot"></span> DISEÑO CUIDADO. DESARROLLO A TU MEDIDA.</div>
       </div>
-
-      <aside class="session-card" aria-label="Configuración visual del campo">
-        <div class="session-card__top"><span>VISUAL SYSTEM / 001</span><span class="live-state"><i></i> FIELD ACTIVE</span></div>
-        <h2>Portal field</h2>
-        <p>Selecciona la frecuencia de color del campo. El núcleo central permanece blanco.</p>
-        <div class="swatches" role="group" aria-label="Color del resplandor exterior">
-          <button class="swatch" type="button" data-color="cobalt" aria-label="Azul cobalto" aria-pressed="true"></button>
-          <button class="swatch" type="button" data-color="violet" aria-label="Violeta" aria-pressed="false"></button>
-          <button class="swatch" type="button" data-color="teal" aria-label="Verde teal" aria-pressed="false"></button>
-          <button class="swatch" type="button" data-color="ember" aria-label="Ámbar ember" aria-pressed="false"></button>
+      <div class="hero__visual" aria-label="Composición visual abstracta de una interfaz web">
+        <div class="orbit orbit--outer"></div><div class="orbit orbit--inner"></div>
+        <div class="visual-card">
+          <div class="visual-card__bar"><i></i><i></i><i></i><span>YOUR BUSINESS / ONLINE</span></div>
+          <div class="visual-card__body">
+            <div class="visual-card__label">UNA PRESENCIA QUE DESTACA</div>
+            <div class="visual-card__headline">Ideas claras.<br><b>Experiencias digitales.</b></div>
+            <div class="visual-card__lines"><i></i><i></i><i></i></div>
+            <div class="visual-card__button"></div>
+          </div>
+          <div class="visual-card__foot"><span>DESIGN</span><span>DEVELOPMENT</span><span>GMZ / 01</span></div>
         </div>
-      </aside>
+        <span class="visual-note visual-note--top">WEB DESIGN / 01</span>
+        <span class="visual-note visual-note--bottom">BUILT FOR YOUR BUSINESS</span>
+      </div>
+      <div class="hero__bottom"><span>GMZ DIGITAL SOLUTIONS</span><span>NUEVO LEÓN, MÉXICO</span><a href="#servicios">DESCUBRIR MÁS ↓</a></div>
+    </section>
 
-      <div class="portal__caption">
-        <span>GMZ ENTERPRISE / EST. 2026</span><span>TECHNOLOGY. STRATEGY. GROWTH.</span><span>SYSTEMS BUILT WITH INTENT.</span>
+    <section class="section services" id="servicios">
+      <div class="section-heading">
+        <p class="eyebrow"><span></span> 01 / LO QUE HACEMOS</p>
+        <h2>Una buena web no solo<br><span>se ve bien. Funciona.</span></h2>
+        <p>Soluciones digitales pensadas para que tus clientes entiendan lo que ofreces y puedan contactarte fácilmente.</p>
+      </div>
+      <div class="service-grid" id="lista-servicios"></div>
+    </section>
+
+    <section class="work-section" id="proyectos">
+      <div class="section work">
+        <div class="section-heading">
+          <p class="eyebrow"><span></span> 02 / TRABAJO</p>
+          <h2>Diseño con intención.<br><span>Resultados concretos.</span></h2>
+          <p>Conoce algunos ejemplos de experiencias y herramientas digitales.</p>
+        </div>
+        <div class="project-grid" id="lista-proyectos"></div>
       </div>
     </section>
 
-    <section class="section section--intro" id="soluciones">
-      <div class="section__heading">
-        <p class="eyebrow">01 / CAPABILITIES</p>
-        <h2>Tecnología con propósito.<br><span>Soluciones que conectan.</span></h2>
-        <p>Combinamos desarrollo de software, diseño y pensamiento de procesos para resolver necesidades reales de negocio.</p>
+    <section class="section about" id="nosotros">
+      <div class="about-mark">GMZ<span>.</span></div>
+      <div class="about-copy">
+        <p class="eyebrow"><span></span> 03 / SOBRE GMZ</p>
+        <h2>Tu idea, bien<br><span>representada en digital.</span></h2>
+        <p>Somos un estudio independiente de diseño y desarrollo web. Trabajamos de cerca con cada negocio para entender qué necesita comunicar y construir una página clara, funcional y alineada con su identidad.</p>
+        <div class="about-tags"><span>DISEÑO WEB</span><span>DESARROLLO</span><span>CATÁLOGOS DIGITALES</span></div>
       </div>
-      <div class="capabilities" id="lista-servicios"></div>
     </section>
 
-    <section class="section section--dark" id="planes">
-      <div class="section__heading">
-        <p class="eyebrow">02 / SOLUTIONS</p>
-        <h2>Una base sólida para<br><span>la siguiente etapa.</span></h2>
-        <p>El alcance y la inversión se definen según los objetivos, procesos y necesidades de cada negocio.</p>
-      </div>
-      <div class="plans" id="lista-planes"></div>
-      <p class="section__note">Los precios mostrados son rangos iniciales en MXN. Dominio, servicios de terceros, comisiones de pago y funciones adicionales se cotizan por separado cuando corresponda.</p>
-    </section>
-
-    <section class="section" id="proyectos">
-      <div class="section__heading">
-        <p class="eyebrow">03 / SELECTED WORK</p>
-        <h2>Ideas convertidas<br><span>en herramientas reales.</span></h2>
-        <p>Una muestra de soluciones desarrolladas y experiencias digitales.</p>
-      </div>
-      <div class="projects" id="lista-proyectos"></div>
-    </section>
-
-    <section class="section section--dark" id="proceso">
-      <div class="section__heading">
-        <p class="eyebrow">04 / OUR METHOD</p>
-        <h2>Claridad en el proceso.<br><span>Precisión en la entrega.</span></h2>
-      </div>
-      <div class="steps" id="lista-pasos"></div>
-    </section>
-
-    <section class="section section--contact" id="contacto">
+    <section class="contact-section" id="contacto">
       <div class="contact-panel">
-        <div>
-          <p class="eyebrow">05 / START A PROJECT</p>
-          <h2>El siguiente paso<br><span>comienza aquí.</span></h2>
-          <p>Cuéntanos qué necesita mejorar tu negocio. Analizamos el reto y definimos una solución con alcance, tiempos e inversión claros.</p>
-          <p class="contact-location" id="ubicacion"></p>
-        </div>
+        <p class="eyebrow"><span></span> 04 / EMPECEMOS</p>
+        <h2>Hagamos que tu negocio<br><span>se vea como merece.</span></h2>
+        <p>Cuéntanos qué tienes en mente. Platicamos sobre tu negocio y te proponemos una solución con alcance y cotización claros.</p>
         <div class="contact-actions">
-          <a class="button button--light" id="boton-whatsapp" href="#">Contactar por WhatsApp ↗</a>
-          <a class="button button--ghost" id="boton-correo" href="#">Enviar correo ↗</a>
+          <a class="button button--primary" id="boton-whatsapp" href="#">Cotizar por WhatsApp <span>↗</span></a>
+          <a class="button button--secondary" id="boton-correo" href="#">Enviar correo</a>
         </div>
+        <span class="contact-location" id="ubicacion"></span>
       </div>
     </section>
   </main>
-  <footer class="footer"><div><strong>GMZ ENTERPRISE</strong><span>Technology &amp; Business Solutions</span></div><p>© <span id="anio"></span> GMZ ENTERPRISE · Nuevo León, México</p></footer>
+  <footer class="site-footer">
+    <a class="brand" href="#inicio"><span class="brand__symbol">GMZ<span>.</span></span><span class="brand__name">DIGITAL SOLUTIONS</span></a>
+    <span>DISEÑO Y DESARROLLO WEB</span>
+    <span>© <span id="anio"></span> GMZ DIGITAL SOLUTIONS</span>
+  </footer>
 </body>
 </html>
