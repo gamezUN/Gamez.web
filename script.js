@@ -1,34 +1,57 @@
-/* GÁMEZ WEB — renderizado del sitio */
-const $ = id => document.getElementById(id);
-const seguro = v => String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-const wa = mensaje => 'https://wa.me/' + CONFIG.whatsapp.replace(/\D/g,'') + '?text=' + encodeURIComponent(mensaje);
-const botonWa = (mensaje, label='Consultar por WhatsApp') => '<a class="boton boton-azul" target="_blank" rel="noopener noreferrer" href="' + wa(mensaje) + '">' + label + ' ↗</a>';
+/* GMZ ENTERPRISE — renderizado de contenido */
+const $ = (id) => document.getElementById(id);
+const safe = (value) => String(value ?? "").replace(/[&<>"']/g, (char) => ({
+  "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;"
+}[char]));
 
-if ($('titular')) {
-  $('titular').textContent = CONFIG.titular;
-  $('descripcion').textContent = CONFIG.descripcion;
-  $('pie-subtitulo').textContent = CONFIG.subtitulo;
-  $('ubicacion').textContent = '⌖ ' + CONFIG.ubicacion;
-  $('anio').textContent = new Date().getFullYear();
-  $('lista-servicios').innerHTML = CONFIG.servicios.map(s => '<article class="servicio"><div class="servicio-icono">' + seguro(s.icono) + '</div><h3>' + seguro(s.titulo) + '</h3><p>' + seguro(s.descripcion) + '</p></article>').join('');
+const whatsappUrl = (message) =>
+  "https://wa.me/" + CONFIG.whatsapp.replace(/\D/g, "") + "?text=" + encodeURIComponent(message);
 
-  if ($('lista-planes')) {
-    $('lista-planes').innerHTML = CONFIG.planes.map((p, i) =>
-      '<article class="paquete ' + (i === 1 ? 'destacado' : '') + '">' +
-        '<span class="paquete-etiqueta">PLAN ' + seguro(p.numero) + (i === 1 ? ' · MÁS SOLICITADO' : '') + '</span>' +
-        '<h3>' + seguro(p.nombre) + '</h3>' +
-        '<p class="precio">' + seguro(p.precio) + ' <small>MXN</small></p>' +
-        '<p class="descripcion">' + seguro(p.descripcion) + '</p>' +
-        '<ul>' + p.incluye.map(item => '<li>' + seguro(item) + '</li>').join('') + '</ul>' +
-        botonWa(p.mensaje, 'Solicitar cotización ↗') +
-      '</article>'
-    ).join('');
-  }
+if ($("lista-servicios")) {
+  $("ubicacion").textContent = "⌖ " + CONFIG.ubicacion;
+  $("anio").textContent = new Date().getFullYear();
 
-  $('boton-correo').href = 'mailto:' + CONFIG.correo + '?subject=' + encodeURIComponent('Cotización GÁMEZ WEB');
-  $('boton-whatsapp').href = wa('Hola, vi la página de GÁMEZ WEB y quisiera solicitar información sobre sus soluciones.');
-  $('boton-whatsapp').target = '_blank'; $('boton-whatsapp').rel = 'noopener noreferrer';
-  $('boton-llamar').href = 'tel:+' + CONFIG.whatsapp;
-  $('lista-proyectos').innerHTML = CONFIG.proyectos.map(p => '<article class="proyecto"><div class="proyecto-imagen">' + seguro(p.iniciales) + '</div><div class="proyecto-cuerpo"><span class="proyecto-categoria">' + seguro(p.categoria) + '</span><h3>' + seguro(p.titulo) + '</h3><p>' + seguro(p.descripcion) + '</p><a href="' + seguro(p.url) + '" target="_blank" rel="noopener noreferrer">Ver proyecto ↗</a></div></article>').join('');
-  $('lista-pasos').innerHTML = CONFIG.pasos.map((p,i) => '<article class="paso"><span class="paso-numero">' + String(i+1).padStart(2,'0') + '</span><h3>' + seguro(p.titulo) + '</h3><p>' + seguro(p.descripcion) + '</p></article>').join('');
+  $("lista-servicios").innerHTML = CONFIG.servicios.map((service, index) => `
+    <article class="service-card">
+      <span class="service-card__index">CAPABILITY / 0${index + 1}</span>
+      <h3>${safe(service.titulo)}</h3>
+      <p>${safe(service.descripcion)}</p>
+    </article>
+  `).join("");
+
+  $("lista-planes").innerHTML = CONFIG.planes.map((plan, index) => `
+    <article class="plan-card ${index === 1 ? "plan-card--featured" : ""}">
+      <span class="plan-card__label">SOLUTION / ${safe(plan.numero)}</span>
+      <h3>${safe(plan.nombre)}</h3>
+      <p class="plan-card__price">${safe(plan.precio)} MXN</p>
+      <p>${safe(plan.descripcion)}</p>
+      <ul>${plan.incluye.map((item) => `<li>${safe(item)}</li>`).join("")}</ul>
+      <a href="${whatsappUrl(plan.mensaje)}" target="_blank" rel="noopener noreferrer">Solicitar diagnóstico ↗</a>
+    </article>
+  `).join("");
+
+  $("lista-proyectos").innerHTML = CONFIG.proyectos.map((project) => `
+    <article class="project-card">
+      <div class="project-card__visual" aria-hidden="true">${safe(project.iniciales)}</div>
+      <div class="project-card__body">
+        <span class="project-card__tag">${safe(project.categoria)}</span>
+        <h3>${safe(project.titulo)}</h3>
+        <p>${safe(project.descripcion)}</p>
+        <a href="${safe(project.url)}" target="_blank" rel="noopener noreferrer">Ver proyecto ↗</a>
+      </div>
+    </article>
+  `).join("");
+
+  $("lista-pasos").innerHTML = CONFIG.pasos.map((step, index) => `
+    <article class="step-card">
+      <span class="step-card__number">0${index + 1}</span>
+      <h3>${safe(step.titulo)}</h3>
+      <p>${safe(step.descripcion)}</p>
+    </article>
+  `).join("");
+
+  $("boton-whatsapp").href = whatsappUrl("Hola, vi la página de GMZ ENTERPRISE y quisiera hablar sobre una solución digital para mi negocio.");
+  $("boton-whatsapp").target = "_blank";
+  $("boton-whatsapp").rel = "noopener noreferrer";
+  $("boton-correo").href = "mailto:" + CONFIG.correo + "?subject=" + encodeURIComponent("Proyecto — GMZ ENTERPRISE");
 }

@@ -1,25 +1,122 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="GÁMEZ WEB: páginas web, herramientas comerciales y sistemas administrativos para negocios.">
-  <meta name="theme-color" content="#080e1c"><title>GÁMEZ WEB | Digital Solutions</title>
-  <link rel="icon" type="image/png" href="assets/logo.png"><link rel="stylesheet" href="styles.css">
-  <script src="config.js" defer></script><script src="script.js" defer></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#020202">
+  <meta name="description" content="GMZ ENTERPRISE diseña y desarrolla soluciones digitales, sistemas empresariales y herramientas tecnológicas para negocios.">
+  <title>GMZ ENTERPRISE — Technology &amp; Business Solutions</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@200;300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="config.js" defer></script>
+  <script src="script.js" defer></script>
+  <script type="module" src="portal-field.js"></script>
 </head>
 <body>
-<header class="cabecera"><nav class="contenedor navegacion" aria-label="Navegación principal">
-<a class="marca" href="#inicio"><span class="marca-icono">GW</span><span>GÁMEZ <em>WEB</em></span></a>
-<div class="enlaces"><a href="#servicios">Servicios</a><a href="#paquetes">Planes</a><a href="#proyectos">Proyectos</a><a href="#contacto">Contacto</a></div>
-<a class="boton boton-pequeno boton-borde" href="#contacto">Cotizar ↗</a></nav></header>
-<main>
-<section id="inicio" class="hero contenedor"><div class="hero-contenido"><p class="etiqueta"><span class="punto"></span> DIGITAL SOLUTIONS · WEB DEVELOPMENT</p><h1 id="titular">Soluciones digitales para hacer crecer tu negocio.</h1><p class="intro" id="descripcion"></p><div class="acciones"><a class="boton boton-azul" href="#paquetes">Explorar soluciones ↗</a><a class="boton boton-borde" href="#proyectos">Ver proyectos</a></div><p class="hero-nota">Estrategia clara <span>✦</span> Desarrollo a medida <span>✦</span> Atención directa</p></div>
-<div class="hero-visual"><div class="halo"></div><div class="panel-logo"><img src="assets/logo.png" alt="Logotipo GÁMEZ WEB"><div class="panel-pie"><span>DIGITAL SOLUTIONS</span><span>01 / GW</span></div></div><span class="orbita orbita-uno"></span><span class="orbita orbita-dos"></span></div></section>
-<div class="cinta"><div class="contenedor cinta-interior"><span>SOLUCIONES DIGITALES PARA NEGOCIOS</span><span>WEB · CRM · SISTEMAS</span><span>NUEVO LEÓN, MÉXICO</span></div></div>
-<section id="servicios" class="seccion contenedor"><div class="encabezado-seccion"><p class="etiqueta">01 / QUÉ HACEMOS</p><h2>Herramientas digitales para que tu negocio <span>se vea y funcione mejor.</span></h2><p>Primero entendemos lo que necesitas; después definimos la solución y su alcance.</p></div><div class="rejilla servicios" id="lista-servicios"></div></section>
-<section id="paquetes" class="seccion zona-oscura"><div class="contenedor"><div class="encabezado-seccion"><p class="etiqueta">02 / SOLUCIONES GMZ</p><h2>Tres formas de impulsar <span>tu negocio.</span></h2><p>Elige el nivel de solución que mejor se adapta a la operación de tu negocio.</p></div><div class="rejilla paquetes" id="lista-planes"></div><div class="condiciones-planes"><p><strong>Consideraciones de los planes</strong></p><ul><li>El dominio propio no está incluido. Su registro y renovación se cotizan por separado.</li><li>El botón de pago se puede integrar en cualquiera de los tres planes, con costo adicional.</li><li>Las comisiones de la plataforma de pago corren por cuenta del cliente.</li><li>Los precios son rangos iniciales en MXN. El costo final se define después de un diagnóstico y de acordar el alcance.</li></ul></div></div></section>
-<section id="proyectos" class="seccion contenedor"><div class="encabezado-seccion"><p class="etiqueta">03 / TRABAJO REAL</p><h2>Proyectos que hablan <span>por mi trabajo.</span></h2><p>Explora un ejemplo de catálogo digital desarrollado.</p></div><div class="rejilla proyectos" id="lista-proyectos"></div></section>
-<section id="proceso" class="seccion proceso-seccion"><div class="contenedor"><div class="encabezado-seccion"><p class="etiqueta">04 / CÓMO TRABAJAMOS</p><h2>Primero entendemos el reto. <span>Después diseñamos la solución.</span></h2></div><div class="rejilla pasos" id="lista-pasos"></div></div></section>
-<section id="contacto" class="seccion contenedor"><div class="contacto"><div><p class="etiqueta">05 / HABLEMOS</p><h2>¿Tienes un negocio <span>o una idea?</span></h2><p>Cuéntame cómo trabajas y qué quieres mejorar. Revisamos juntos qué solución digital tiene sentido para tu negocio.</p><p class="ubicacion" id="ubicacion"></p></div><div class="contacto-botones"><a id="boton-whatsapp" class="boton boton-azul" href="#">Contáctame por WhatsApp ↗</a><a id="boton-correo" class="boton boton-gris" href="#">Enviar correo ↗</a><a id="boton-llamar" class="enlace-simple" href="#">Llamar ↗</a></div></div></section>
-</main><footer><div class="contenedor pie"><div><strong>GÁMEZ <span>WEB</span></strong><p id="pie-subtitulo">Soluciones digitales y desarrollo web</p></div><p>© <span id="anio"></span> GÁMEZ WEB · Building Digital Experiences.</p></div></footer>
-</body></html>
+  <main>
+    <section class="portal" id="inicio" aria-labelledby="hero-title">
+      <div class="portal__webgl" aria-hidden="true"><canvas id="portal-canvas"></canvas></div>
+      <div class="portal__frame" aria-hidden="true">
+        <i class="portal__tick portal__tick--tl"></i><i class="portal__tick portal__tick--tr"></i>
+        <i class="portal__tick portal__tick--bl"></i><i class="portal__tick portal__tick--br"></i>
+      </div>
+      <header class="portal__topbar">
+        <a class="brand" href="#inicio" aria-label="GMZ Enterprise, inicio">
+          <span class="brand__mark">GMZ</span><span>GMZ ENTERPRISE</span>
+        </a>
+        <nav class="portal__nav" aria-label="Navegación principal">
+          <a href="#soluciones">Soluciones</a><a href="#proyectos">Proyectos</a><a href="#proceso">Método</a>
+          <a class="portal__nav-cta" href="#contacto">Contacto ↗</a>
+        </nav>
+        <span class="portal__top-meta">TECHNOLOGY &amp; BUSINESS SOLUTIONS</span>
+      </header>
+
+      <span class="portal__side-label" aria-hidden="true">ENGINEERED FOR WHAT'S NEXT</span>
+
+      <div class="portal__content">
+        <p class="eyebrow"><span class="eyebrow__line"></span> DIGITAL INFRASTRUCTURE / 001</p>
+        <h1 class="portal__headline" id="hero-title">
+          <span class="headline-line"><span>Engineering</span></span>
+          <span class="headline-line"><span>what moves</span></span>
+          <span class="headline-line"><span>business forward.</span></span>
+        </h1>
+        <p class="portal__intro">Diseñamos tecnología, sistemas y soluciones digitales que ayudan a las empresas a operar mejor, conectar sus procesos y avanzar con claridad.</p>
+        <div class="portal__actions">
+          <a class="button button--light" href="#soluciones">Explore solutions <span aria-hidden="true">↗</span></a>
+          <a class="button button--ghost" href="#contacto">Iniciar un proyecto</a>
+        </div>
+      </div>
+
+      <aside class="session-card" aria-label="Configuración visual del campo">
+        <div class="session-card__top"><span>VISUAL SYSTEM / 001</span><span class="live-state"><i></i> FIELD ACTIVE</span></div>
+        <h2>Portal field</h2>
+        <p>Selecciona la frecuencia de color del campo. El núcleo central permanece blanco.</p>
+        <div class="swatches" role="group" aria-label="Color del resplandor exterior">
+          <button class="swatch" type="button" data-color="cobalt" aria-label="Azul cobalto" aria-pressed="true"></button>
+          <button class="swatch" type="button" data-color="violet" aria-label="Violeta" aria-pressed="false"></button>
+          <button class="swatch" type="button" data-color="teal" aria-label="Verde teal" aria-pressed="false"></button>
+          <button class="swatch" type="button" data-color="ember" aria-label="Ámbar ember" aria-pressed="false"></button>
+        </div>
+      </aside>
+
+      <div class="portal__caption">
+        <span>GMZ ENTERPRISE / EST. 2026</span><span>TECHNOLOGY. STRATEGY. GROWTH.</span><span>SYSTEMS BUILT WITH INTENT.</span>
+      </div>
+    </section>
+
+    <section class="section section--intro" id="soluciones">
+      <div class="section__heading">
+        <p class="eyebrow">01 / CAPABILITIES</p>
+        <h2>Tecnología con propósito.<br><span>Soluciones que conectan.</span></h2>
+        <p>Combinamos desarrollo de software, diseño y pensamiento de procesos para resolver necesidades reales de negocio.</p>
+      </div>
+      <div class="capabilities" id="lista-servicios"></div>
+    </section>
+
+    <section class="section section--dark" id="planes">
+      <div class="section__heading">
+        <p class="eyebrow">02 / SOLUTIONS</p>
+        <h2>Una base sólida para<br><span>la siguiente etapa.</span></h2>
+        <p>El alcance y la inversión se definen según los objetivos, procesos y necesidades de cada negocio.</p>
+      </div>
+      <div class="plans" id="lista-planes"></div>
+      <p class="section__note">Los precios mostrados son rangos iniciales en MXN. Dominio, servicios de terceros, comisiones de pago y funciones adicionales se cotizan por separado cuando corresponda.</p>
+    </section>
+
+    <section class="section" id="proyectos">
+      <div class="section__heading">
+        <p class="eyebrow">03 / SELECTED WORK</p>
+        <h2>Ideas convertidas<br><span>en herramientas reales.</span></h2>
+        <p>Una muestra de soluciones desarrolladas y experiencias digitales.</p>
+      </div>
+      <div class="projects" id="lista-proyectos"></div>
+    </section>
+
+    <section class="section section--dark" id="proceso">
+      <div class="section__heading">
+        <p class="eyebrow">04 / OUR METHOD</p>
+        <h2>Claridad en el proceso.<br><span>Precisión en la entrega.</span></h2>
+      </div>
+      <div class="steps" id="lista-pasos"></div>
+    </section>
+
+    <section class="section section--contact" id="contacto">
+      <div class="contact-panel">
+        <div>
+          <p class="eyebrow">05 / START A PROJECT</p>
+          <h2>El siguiente paso<br><span>comienza aquí.</span></h2>
+          <p>Cuéntanos qué necesita mejorar tu negocio. Analizamos el reto y definimos una solución con alcance, tiempos e inversión claros.</p>
+          <p class="contact-location" id="ubicacion"></p>
+        </div>
+        <div class="contact-actions">
+          <a class="button button--light" id="boton-whatsapp" href="#">Contactar por WhatsApp ↗</a>
+          <a class="button button--ghost" id="boton-correo" href="#">Enviar correo ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="footer"><div><strong>GMZ ENTERPRISE</strong><span>Technology &amp; Business Solutions</span></div><p>© <span id="anio"></span> GMZ ENTERPRISE · Nuevo León, México</p></footer>
+</body>
+</html>
