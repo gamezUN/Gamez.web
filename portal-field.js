@@ -60,19 +60,15 @@ const fragmentShader = `
     float aspect = u_resolution.x / u_resolution.y;
     vec2 p = (uv - 0.5) * vec2(aspect, 1.0) + u_mouse;
     float t = u_time;
-
     float d1 = sdArc(p, vec2(0.0), 0.60, 0.02, 0.15, t);
     float d2 = sdArc(p, vec2(0.0), 0.65, 0.06, 0.20, t);
-
     float coreGlow = exp(-d1 * 30.0);
     float fringeGlow = exp(-d2 * 10.0);
     float wash = exp(-length(p) * 2.4) * (sin(t * 0.5) * 0.2 + 0.8);
-
     vec3 color = vec3(coreGlow);
     color += u_colorFringe * fringeGlow;
     color += u_colorFringe * wash * 0.075;
     color = 1.0 - exp(-color * 1.5);
-
     float alpha = clamp(max(coreGlow, fringeGlow * 0.72) + wash * 0.08, 0.0, 1.0);
     gl_FragColor = vec4(color, alpha);
   }
@@ -142,6 +138,13 @@ export function createPortalField({ fringeColor = "cobalt", mouseAmount = 0.05 }
   const targetMouse = new THREE.Vector2(0, 0);
   const currentMouse = new THREE.Vector2(0, 0);
   const amount = Math.max(0, Math.min(Number(mouseAmount) || 0, 0.15));
+
+  const setFringeColor = (preset) => {
+    if (FRINGE_COLORS[preset]) {
+      uniforms.u_colorFringe.value = hexColor(FRINGE_COLORS[preset]);
+    }
+  };
+  window.gmzSetFringeColor = setFringeColor;
 
   const resize = () => {
     if (disposed) return;
@@ -223,6 +226,7 @@ export function createPortalField({ fringeColor = "cobalt", mouseAmount = 0.05 }
     host.removeEventListener("pointermove", onPointerMove);
     host.removeEventListener("pointerleave", onPointerLeave);
     reducedMotionQuery.removeEventListener("change", onMotionChange);
+    if (window.gmzSetFringeColor === setFringeColor) delete window.gmzSetFringeColor;
     geometry.dispose();
     material.dispose();
     renderer.dispose();
@@ -238,14 +242,8 @@ document.querySelectorAll(".swatch").forEach((button) => {
     document.querySelectorAll(".swatch").forEach((swatch) => {
       swatch.setAttribute("aria-pressed", String(swatch === button));
     });
-    const material = window.__gmzPortalMaterial;
-    if (material) material.uniforms.u_colorFringe.value = hexColor(FRINGE_COLORS[selected]);
+    window.gmzSetFringeColor?.(selected);
   });
 });
 
-// Expose only the live uniform for the small color-control group.
-const canvasElement = document.querySelector("#portal-canvas");
-if (canvasElement) {
-  const observer = new MutationObserver(() => {});
-  observer.disconnect();
-}
+window.addEventListener("pagehide", disposePortal, { once: true });
